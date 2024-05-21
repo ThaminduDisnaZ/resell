@@ -1319,3 +1319,5 @@ function sendAdminMsg(){
     var main = document.getElementById("main_img");
     main.style.backgroundImage = "url(" + img + ")";
 }
+
+
