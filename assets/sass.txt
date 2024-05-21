@@ -1,0 +1,1 @@
+sass --watch "D:\Dropbox\Shahnewaz\topico TF\topico\assets\scss\main.scss":"D:\Dropbox\Shahnewaz\topico TF\topico\assets\css\style.css"

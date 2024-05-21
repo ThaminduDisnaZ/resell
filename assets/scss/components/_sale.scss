@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  07. SALE CSS START
+/*----------------------------------------*/
+
+.sale{
+    &__slider{
+        & .owl-nav{
+            display: flex;
+            position: absolute;
+            top: -70px;
+            right: 0;
+            & div{
+                margin: 0 7px;
+                & button{
+                    font-size: 24px;
+                    color: #333;
+                    background: transparent;
+                    @include transition(.1s);
+                    &:hover{
+                        color: $t-yellow;
+                    }
+                }
+            }
+        }
+    }
+}

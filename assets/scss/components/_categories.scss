@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  10. CATEGORIES CSS START
+/*----------------------------------------*/
+
+.category{
+  &__title{
+    & span{
+      font-size: 14px;
+      text-transform: capitalize;
+      display: inline-block;
+      margin-bottom: 15px;
+      &:hover{
+        & a{
+          color: $t-red-dark;
+        }
+      }
+    }
+    & h3{
+      font-size: 18px;
+      margin-bottom: 20px;
+      &:hover{
+        & a{
+          color: $t-red-dark;
+        }
+      }
+    }
+  }
+  &__item{
+    padding-right: 10px;
+    margin-right: 5px;
+  }
+  &__links{
+    & ul{
+      & li{
+        & a{
+          font-size: 14px;
+          color: $black;
+          &:hover{
+            color: $t-red-dark;
+          }
+        }
+      }
+    }
+  }
+}

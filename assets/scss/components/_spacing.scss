@@ -1,0 +1,150 @@
+@use '../abstracts' as *;
+
+/*----------------------------------------*/
+/*  00. SPACING CSS START
+/*----------------------------------------*/
+
+
+/* custom container & column*/
+.custom-col-2{
+	max-width: 20%;
+	flex: 0 0 20%;
+	-ms-flex: 0 0 20%;
+	@media #{$lg}{
+		max-width: 33.33%;
+		flex: 0 0 33.33%;
+		-ms-flex: 0 0 33.33%;
+	}
+	@media #{$md}{
+		max-width: 50%;
+		flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+	}
+	@media #{$sm}{
+		max-width: 50%;
+		flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+	}
+	@media #{$xs}{
+		max-width: 100%;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+	&-2{
+		max-width: 20%;
+		flex: 0 0 20%;
+		-ms-flex: 0 0 20%;
+		@media #{$md}{
+			max-width: 50%;
+			flex: 0 0 50%;
+			-ms-flex: 0 0 50%;
+		}
+		@media #{$sm}{
+			max-width: 100%;
+			flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+		}
+		@media #{$xs}{
+			max-width: 100%;
+			flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+		}
+	}
+}
+
+.custom-col-10{
+	max-width: 80%;
+	flex: 0 0 80%;
+	-ms-flex: 0 0 80%;
+	@media #{$lg}{
+		max-width: 100%;
+		flex: 0 0 1000%;
+		-ms-flex: 0 0 100%;
+	}
+	@media #{$md}{
+		max-width: 100%;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+	@media #{$sm}{
+		max-width: 100%;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+	@media #{$xs}{
+		max-width: 100%;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+	&-2{
+		max-width: 80%;
+		flex: 0 0 80%;
+		-ms-flex: 0 0 80%;
+		@media #{$md}{
+			max-width: 50%;
+			flex: 0 0 50%;
+			-ms-flex: 0 0 50%;
+		}
+		@media #{$sm}{
+			max-width: 100%;
+			flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+		}
+		@media #{$xs}{
+			max-width: 100%;
+			flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+		}
+	}
+}
+
+.custom-col-9{
+	max-width: 71.1%;
+	flex: 0 0 71.1%;
+	-ms-flex: 0 0 71.1%;
+	@media #{$sm}{
+		max-width: 100%;
+		flex: 0 0 1000%;
+		-ms-flex: 0 0 100%;
+	}
+	@media #{$xs}{
+		max-width: 100%;
+		flex: 0 0 1000%;
+		-ms-flex: 0 0 100%;
+	}
+}
+.custom-col-3{
+	max-width: 28.9%;
+	flex: 0 0 28.9%;
+	-ms-flex: 0 0 28.9%;
+}
+
+.custom-container{
+	max-width: 1740px;
+}
+
+.box-plr-75{
+	padding-left: 75px;
+	padding-right: 75px;
+	@media #{$xxl, $laptop, $lg, $md, $sm}{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@media #{$xs}{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.box-plr-90{
+	padding-left: 90px;
+	padding-right: 90px;
+	@media #{$xxl, $laptop, $lg, $md, $sm}{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@media #{$xs}{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,194 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  14. ABOUT CSS START
+/*----------------------------------------*/
+
+
+.about{
+    &__mt--325{
+        margin-top: -325px;
+
+        @media #{$md}{
+            margin-top: -110px;
+        }
+        @media #{$sm}{
+            margin-top: -85px;
+        }
+        @media #{$xs}{
+            margin-top: -0;
+        }
+    }
+    &__inner{
+        padding-top: 55px;
+        padding-left: 90px;
+        padding-right: 120px;
+
+        @media #{$lg}{
+            padding-left: 40px;
+            padding-right: 70px;
+        }
+
+        @media #{$md}{
+            padding-top: 35px;
+            padding-left: 40px;
+            padding-right: 70px;
+        }
+
+        @media #{$sm}{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @media #{$xs}{
+            padding-top: 25px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    &__wrapper{
+        & h3{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+    &__quote{
+        border-left: 4px solid $t-yellow;
+        padding-left: 30px;
+        margin-bottom: 35px;
+        & p{
+            line-height: 1;
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+            font-style: italic;
+            & span{
+                color: $t-yellow;
+            }
+        }
+    }
+    &__text{
+        margin-bottom: 35px;
+    }
+}
+
+
+.why{
+    &__item{
+        &:hover{
+            & .why__thumb{
+                & img{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+    &__inner{
+        @media #{$lg}{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media #{$md}{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @media #{$sm}{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @media #{$xs}{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &__content{
+        padding-top: 30px;
+        & h3{
+            font-size: 18px;
+        }
+    }
+}
+
+.video{
+    &__section-head{
+        @media #{$lg}{
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        @media #{$md}{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        @media #{$sm}{
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        @media #{$xs}{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &__content{
+        & iframe{
+            width: 100%;
+            height: 500px;
+        }
+    }
+    &__text{
+        @media #{$laptop}{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @media #{$lg}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$lg}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$md}{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        @media #{$sm, $xs}{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+.team{
+    &__inner{
+        @media #{$lg}{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media #{$md}{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @media #{$sm, $xs}{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    &__item{
+        &:hover{
+            & .team__thumb{
+                & img{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+    &__content{
+        padding-top: 15px;
+        & h3{
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        & span{
+            font-size: 13px;
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@use '../abstracts' as *;
+
+/*----------------------------------------*/
+/*  00. BUTTONS CSS START
+/*----------------------------------------*/
+
+/* btn */
+
+.t-y-btn{
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 500;
+	background-color: $t-yellow;
+	height: 45px;
+	line-height: 42px;
+	padding: 0 50px;
+	color: $white;
+	border-radius: 30px;
+	text-transform: initial;
+	z-index: 1;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	text-align: center;
+	&:hover{
+		border-color: $t-yellow;
+		color: $black;
+		background: $white;
+	}
+	&-sub{
+		height: 50px;
+		line-height: 50px;
+		background: $t-yellow;
+		color: $black;
+		text-transform: uppercase;
+		padding: 0 25px;
+		border-radius: 0 35px 35px 0;
+		border: 0;
+		text-align: center;
+		&:hover{
+			background: $t-yellow;
+			color: $white;
+		}
+	}
+	&-border{
+		background: $white;
+		color: $black;
+		border-color: $t-yellow;
+		&:hover{
+			background: $t-yellow;
+			color: $white;
+		}
+		&-red{
+			border-color: $t-red-dark;
+			&:hover{
+				background: $t-red-dark;
+				color: $white;
+				border-color: $t-red-dark;
+			}
+		}
+	}
+	&-red{
+		background: $t-red-dark;
+		color: $white;
+		&:hover{
+			border-color: $t-red-dark;
+			color: $black;
+			background: $white;
+		}
+	}
+	&-grey{
+		background: #f6f6f6;
+		border-color: #e6e6e6;
+		color: $black;
+		border-width: 1px;
+		line-height: 43px;
+		&:hover{
+			background: $black;
+			border-color: $black;
+			color: $white;
+		}
+	}
+}

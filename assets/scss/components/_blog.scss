@@ -1,0 +1,375 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  08. BLOG CSS START
+/*----------------------------------------*/
+
+.blog{
+    &__area{}
+    &__slider{
+        & .owl-nav{
+            display: flex;
+            position: absolute;
+            top: -70px;
+            right: 0;
+            & div{
+                margin: 0 7px;
+                & button{
+                    font-size: 24px;
+                    color: #333;
+                    background: transparent;
+                    @include transition(.1s);
+                    &:hover{
+                        color: $t-yellow;
+                    }
+                }
+            }
+        }
+    }
+    &__item{
+        @include transition(.3s);
+        &:hover{
+            @include box-shadow(0 0 20px 0 rgba(155,166,200,.2));
+            & .blog__thumb{
+                & img{
+                    @include transform(scale(1.1) rotate(1deg));
+                }
+            }
+        }
+    }
+    &__thumb{
+        & img{
+            width: 100%;
+        }
+    }
+    &__content{
+        padding: 23px 20px;
+        & h3{
+            font-size: 16px;
+            margin-bottom: 2px;
+            & a{
+                &:hover{
+                    color: $t-yellow;
+                }
+            }
+        }
+        & p{
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    &__meta{
+        margin-bottom: 12px;
+        & span{
+            &.date{
+                color: $t-yellow;
+            }
+        }
+    }
+}
+
+// postbox css start
+
+.postbox{
+    &__item{
+        &:hover{
+            & .postbox__thumb{
+                & img{
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+    &__thumb{
+        overflow: hidden;
+    }
+    &__content{
+        padding-top: 25px;
+    }
+    &__title{
+        font-size: 18px;
+        margin-bottom: 15px;
+        & a{
+            &:hover{
+                color: $t-yellow;
+            }
+        }
+        &-2{
+            font-size: 24px;
+        }
+    }
+    &__meta{
+        margin-bottom: 5px;
+        & p{
+            color: #888;
+            & span{
+                color: $t-yellow;
+            }
+        }
+    }
+    &__text{
+        & p{
+            margin-bottom: 23px;
+        }
+    }
+    &__tag{
+        & p{
+            color: #aaa;
+            margin-bottom: 0;
+
+            & a{
+                color: $black;
+            }
+        }
+    }
+    &__bottom{
+        padding-top: 25px;
+        border-top: 1px solid #e6e6e6;
+    }
+}
+
+
+// recent post css start
+
+.rc{
+    &__post{
+        & ul{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &-thumb{
+            & img{
+                width: 80px;
+                height: 48px;
+                @include border-radius(3px);
+            }
+        }
+        &-title{
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 400;
+            & a{
+                &:hover{
+                    color: $t-yellow;
+                }
+            }
+        }
+        &-content{
+
+        }
+    }
+    &__meta{
+        & span{
+            font-size: 12px;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: #989898;
+        }
+    }
+}
+
+//sidebar
+
+.sidebar{
+    &__widget{
+        &-title{
+            padding-bottom: 6px;
+            border-bottom: 1px solid $border;
+            position: relative;
+            font-size: 20px;
+			font-weight: 500;
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: -1px;
+                left: 0;
+                height: 2px;
+                width: 50px;
+                background: $t-yellow;
+            }
+        }
+    }
+    &__categories{
+        & ul{
+            & li{
+                padding: 10px 0;
+                border-bottom: 1px solid #e6e6e6;
+                & a{
+                    font-size: 14px;
+                    color: $black;
+                }
+            }
+        }
+    }
+    &__search{
+        position: relative;
+        & input{
+            padding-left: 25px;
+            padding-right: 55px;
+            background: #f4f4f4;
+            border-radius: 3px;
+            border: 1px solid #e6e6e6;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            font-size: 12px;
+            &::placeholder{
+                color: $black-soft-8;
+                font-size: 12px;
+            }
+        }
+        & button{
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: 25px;
+            font-size: 16px;
+            color: $black-soft-8;
+        }
+    }
+    &__archive{
+        & ul{
+            & li{
+                padding: 10px 0;
+                border-bottom: 1px solid #e6e6e6;
+                & a{
+                    font-size: 14px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+
+// comments
+
+
+.post-comments {
+	border-bottom: 1px solid  $border;
+	margin-bottom: 42px;
+	padding-bottom: 46px;
+}
+
+.comments-box {
+	border-top: 1px solid $border;
+	padding: 30px 0;
+}
+
+.latest-comments li:first-child .comments-box {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.comments-avatar {
+    float: left;
+    margin-right: 20px;
+    & img{
+        @include border-radius(50%);
+    }
+}
+
+.comments-text {
+	overflow: hidden;
+	padding-top: 4px;
+}
+.comments-text p{
+	font-size: 15px;
+    color: $black;
+}
+.comments-text p span{
+	color: $black-soft;
+}
+
+.avatar-name {
+	margin-bottom: 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+.avatar-name h5 {
+	font-size: 14px;
+    margin-bottom: 0px;
+    display: inline-block;
+    color: $black;
+}
+.avatar-name span {
+	color: $black-soft;
+	font-size: 12px;
+	text-transform: capitalize;
+}
+
+.reply {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	transition: .3s;
+	line-height: 1;
+	margin-top: 4px;
+	position: absolute;
+	right: 0;
+    top: 0;
+    color: $black-soft;
+    &:hover{
+        color: $t-yellow;
+    }
+    @media #{$xs}{
+       position: static;
+    }
+}
+
+.comments-text p {
+	margin-bottom: 0;
+    margin-top: 8px;
+    color: #5b5b5b;
+}
+
+.latest-comments li.children {
+    margin-left: 100px;
+    @media #{$xs}{
+        margin-left: 15px;
+    }
+}
+
+.load-comments{
+    color: $t-yellow;
+    font-weight: 500;
+}
+
+
+.conatct-post-form input {
+	border: 1px solid #eaeaea;
+	height: 55px;
+	margin-bottom: 30px;
+	padding: 0 30px;
+	width: 100%;
+    font-size: 14px;
+    outline: none;
+    &::placeholder{
+        color: $body-text-color;
+    }
+    &:focus{
+        border-color: $t-yellow;
+    }
+}
+
+.conatct-post-form textarea {
+	border: 1px solid #eaeaea;
+	height: 175px;
+	margin-bottom: 30px;
+	padding: 30px;
+	width: 100%;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    &::placeholder{
+        color: $body-text-color;
+    }
+    &:focus{
+        border-color: $t-yellow;
+    }
+}
+

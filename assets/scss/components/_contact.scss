@@ -1,0 +1,142 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  15. CONTACT CSS START
+/*----------------------------------------*/
+
+.contact{
+    &__map{
+        height: 600px;
+        & iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        padding-bottom: 6px;
+        border-bottom: 1px solid $border;
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: -1px;
+            left: 0;
+            height: 2px;
+            width: 50px;
+            background: $t-yellow;
+        }
+    }
+    &__input{
+        margin-bottom: 20px;
+        & input,
+        & textarea{
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #e6e6e6;
+            outline: none;
+            padding: 0 15px;
+            &:focus{
+                border-color: $t-yellow;
+            }
+        }
+        & textarea{
+            height: 150px;
+            line-height: 1.5;
+            padding: 15px;
+            resize: none;
+        }
+        & span{
+            color: #555;
+            display: inline-block;
+            position: relative;
+
+            &::after{
+                content: '*';
+                color: #e02b27;
+                font-size: 1.2rem;
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+    &__hotline{
+        &-icon{
+            margin-right: 15px;
+            & i{
+                font-size: 35px;
+                color: $t-yellow;
+            }
+        }
+        &-info{
+            & span{
+                font-weight: 400;
+                display: block;
+                color: #666;
+            }
+            & h6{
+                font-size: 18px;
+                color: #666;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__address{
+        & ul{
+            & li{
+                & p{
+                    font-size: 14px;
+                    color: #666;
+                    margin-bottom: 10px;
+                    & span{
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    &__social{
+        & span{
+            margin-right: 10px;
+        }
+        & ul{
+            display: inline-block;
+            & li{
+                display: inline-block;
+                margin-right: 5px;
+                & a{
+                    display: inline-block;
+                    font-size: 14px;
+                    text-align: center;
+                    transition: all .4s ease;
+                    -webkit-transition: all .4s ease;
+                    -moz-transition: all .4s ease;
+                    -o-transition: all .4s ease;
+                    -ms-transition: all .4s ease;
+                    color: #888;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border: 2px solid #e6e6e6;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    border-width: 1px;
+                    &:hover{
+                        color: $white;
+                        border-color: $t-yellow;
+                        background: $t-yellow;
+                    }
+                }
+            }
+        }
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__form{
+        @media #{$md, $sm, $xs}{
+            margin-top: 50px;
+        }
+    }
+}

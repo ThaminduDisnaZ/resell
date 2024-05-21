@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  05. FEATURES CSS START
+/*----------------------------------------*/
+
+.features{
+    &__area{}
+    &__inner{
+      border: 1px solid $border;
+    }
+    &__wrapper{
+      border: 1px solid $border;
+    }
+    &__item{
+        padding: 25px;
+        position: relative;
+        @media #{$laptop}{
+          padding: 25px 20px;
+        }
+        @media #{$sm}{
+          padding: 25px 20px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            right: 20px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 1px;
+            height: 50%;
+            background: $border;
+
+            @media #{$xs}{
+              display: none;
+            }
+        }
+        &-last{
+            &::after{
+                display: none;
+            }
+        }
+        &-4{
+          & .features__icon{
+            & i{
+              color: $black;
+            }
+          }
+        }
+    }
+    &__icon{
+        & i{
+            font-size: 40px;
+            color: $t-yellow;
+        }
+    }
+    &__content{
+        & h6{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        & p{
+          font-size: 12px;
+          line-height: 12px;
+          margin-bottom: 0;
+        }
+    }
+}

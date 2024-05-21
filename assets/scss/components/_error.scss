@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  17. ERROR CSS START
+/*----------------------------------------*/
+
+.error{
+    &__area{}
+    &__content{
+        & > span{
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #7b7b7b;
+            font-weight: 500;
+        }
+        & h2{
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            @media #{$sm}{
+                font-size: 45px;
+            }
+            @media #{$xs}{
+                font-size: 25px;
+            }
+        }
+        & p{
+            margin-bottom: 70px;
+        }
+        & .highlight{
+            color: $t-yellow;
+        }
+    }
+    &__number{
+        & h1{
+            font-size: 300px;
+            color: #e5e5e5;
+            line-height: 1;
+            @media #{$sm}{
+                font-size: 200px;
+            }
+            @media #{$xs}{
+                font-size: 100px;
+            }
+        }
+    }
+    &__search{
+        & input{
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid $border;
+            margin-bottom: 50px;
+            outline: none;
+            &::placeholder{
+                color: #8c8c8c;
+            }
+            &:focus{
+                border-color: $t-yellow;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  03. SLIDER CSS START
+/*----------------------------------------*/
+
+.slider{
+    &__area{
+        @include background();
+    }
+    &__inner{
+        & .slick-dots{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            & li{
+                display: inline-block;
+                & button{
+                    font-size: 0;
+                    width: 7px;
+                    height: 7px;
+                    background: $border;
+                    @include border-radius(7px);
+                    margin: 0 5px;
+                }
+                &.slick-active{
+                    & button{
+                        width: 35px;
+                        background: $t-yellow;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-slider{
+  @include border-radius(3px);
+  overflow: hidden;
+  &-4{
+    @include border-radius(10px);
+  }
+}

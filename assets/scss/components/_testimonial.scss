@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  11. TESTIMONIAL CSS START
+/*----------------------------------------*/
+
+.testimonial{
+  &__slider{
+    & .owl-dots{
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: auto;
+      & .owl-dot{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        margin: 0 3px;
+        background: $border;
+        display: inline-block;
+        &.active{
+          border-color: $t-red-dark;
+        }
+      }
+    }
+  }
+  &__item{
+    position: relative;
+    text-align: center;
+    border: 1px solid $border;
+    padding-bottom: 60px;
+  }
+  &__quote{
+    margin-bottom: 15px;
+    & span{
+      font-size: 26px;
+      color: $t-red-dark;
+    }
+  }
+  &__des{
+    background-color: $grey;
+    padding: 40px 15px 50px;
+    & p{
+      color: $black;
+    }
+  }
+  &__avater{
+    margin-bottom: 15px;
+    & img{
+      height: 80px !important;
+      width: 80px !important;
+      @include border-radius(50%);
+      display: inline-block !important;
+    }
+  }
+  &__info{
+    margin-top: -40px;
+    & h4{
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $t-red-dark;
+      margin-bottom: 0;
+    }
+    & span{
+      text-transform: capitalize;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+/*----------------------------------------*/
+/*  13. BREADCRUMB CSS START
+/*----------------------------------------*/
+
+.breadcrumb{
+    &__area{}
+    &__wrapper{
+        & .breadcrumb{
+            margin-bottom: 0;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            &-item{
+                font-size: 13px;
+                color: $black-soft-6;
+                &.active{
+                    color: $t-yellow;
+                }
+            }
+            & .breadcrumb-item + .breadcrumb-item::before {
+                color: $t-yellow;
+                content: var(--bs-breadcrumb-divider, ">");
+            }
+        }
+    }
+}
