@@ -1,0 +1,20 @@
+.bgc{
+    background-color: rgb(228, 228, 228);
+}
+.cardp:hover {
+
+
+        transform: translateY(-10px);
+
+
+}
+
+.cardp{
+
+
+
+    transition: transform 250ms;
+
+
+
+}

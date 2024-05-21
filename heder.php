@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
 </head>
-<body>
+<body >
     
 <div class=" bg-white dark:bg-gray-800 ">
             <nav class="2xl:container 2xl:mx-auto sm:py-2 sm:px-7 py-5 px-4">
@@ -20,8 +21,8 @@
                         <img class="dark:bg-white  p-1 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg4.svg" alt="instagram" />                                                             
                     </div>
                     <div class=" flex space-x-3 items-center">
-                        <img class="p-1 dark:bg-white rounded-full" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg5.svg" alt="circle" />                 
-                        <h1 class=" font-normal text-2xl leading-6 text-gray-800 dark:text-white " >OvonRueden</h1>
+                        <img class="p-1 dark:bg-white rounded-full" width="60px" src="resources/wnonbgLogo.png" alt="circle" />                 
+                        <h1 class=" font-normal text-2xl leading-6 text-gray-800 dark:text-white " >Net Pixel</h1>
                     </div>
                     <div class="hidden sm:flex flex-row space-x-4">
                         <button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-indigo-700 bg-white border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center" >Sign Up</button>
@@ -36,7 +37,7 @@
                 </div>
     
                 <!-- Mobile and small-screen devices (toggle Menu) -->
-                <div id="MobileNavigation" class="hidden sm:hidden mt-4 mx-auto">
+                <div id="MobileNavigation" class="hidden sm:hidden mt-4 mx-auto" >
                     <div class="flex flex-row items-center justify-center space-x-6">
                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg1.svg" alt="twitter" />                       
                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg2.svg" alt="facebook" />
@@ -54,9 +55,9 @@
 
 
 
-        <div class="h-full w-full">
+        <div class="h-full w-full ">
             <!-- Code block starts --> 
-            <nav class="w-full bg-white hidden xl:block shadow">
+            <nav class="w-full  bg-white hidden xl:block shadow">
                 <div class="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
                     <div class="flex items-center">
                         <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mr-10 flex items-center">
@@ -74,7 +75,7 @@
                                         <rect x="14" y="14" width="6" height="6" rx="1" />
                                     </svg>
                                 </span>
-                                Dashboard
+                                Home
                             </a>
                             <a href="javascript:void(0)" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 focus:text-indigo-700 cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
                                 <span class="mr-2">
@@ -83,7 +84,7 @@
                                         <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
                                     </svg>
                                 </span>
-                                Products
+                                Categories
                             </a>
                             <a href="javascript:void(0)" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 focus:text-indigo-700 cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
                                 <span class="mr-2">
@@ -267,9 +268,10 @@
                     </div>
                 </div>
                 <!--Mobile responsive sidebar-->
-                <div class="absolute w-full h-full transform -translate-x-full z-40 xl:hidden" id="mobile-nav">
-                    <div class="bg-gray-800 opacity-50 w-full h-full" onclick="sidebarHandler(false)"></div>
-                    <div class="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+                <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="absolute w-full h-full transform -translate-x-full z-40 xl:hidden " id="mobile-nav">
+                    
+                    <div  class="  w-full h-full" onclick="sidebarHandler(false)"></div>
+                    <div class=" w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
                         <div class="px-6 h-full">
                             <div class="flex flex-col justify-between h-full w-full">
                                 <div>
